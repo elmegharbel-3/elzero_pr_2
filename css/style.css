@@ -1,0 +1,38 @@
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+}
+/* End Global Rules */
+/* Start Components */
+
+/* End Components */
+/* Start Variables */
+
+:root{}
+
+/* End Variables */
+/* Start Media Queries */
+
+/* Mobile */
+@media screen and (max-width:768px){
+    
+}
+
+/* Small Screens */
+@media screen and (max-width:991px){
+    
+}
+
+/* Medium Screen */
+@media screen and (max-width:1999px){
+    
+}
+
+/* Large Screens */
+@media screen and (min-width:768px){
+    
+}
+
+/* Custom */
+
+/* End Media Queries */
