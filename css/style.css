@@ -10,7 +10,6 @@ html {
 }
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: black;
 }
 ul,ol {
     list-style: none;
@@ -26,6 +25,7 @@ ul,ol {
 
 :root{
     --main-color: #19c8fa;
+    --transparent-color: rgb(15 116 143 / 70%)
 }
 
 /* End Variables */
@@ -35,6 +35,15 @@ ul,ol {
 @media (max-width:767px){
     header .container nav ul {
       display: none !important; 
+    }
+    .landing .text {
+      width: 100% !important;
+    }
+    .landing .text .content {
+      max-width: 100% !important;
+    }
+    .landing .change-background {
+      display: none !important;
     }
 }
 
@@ -71,6 +80,12 @@ ul,ol {
 
 /* End Media Queries */
 /* Start Header */
+header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 2;
+}
 header .container {
   display: flex;
   justify-content: space-between;
@@ -137,4 +152,75 @@ header .container nav .search i {
   right: 0;
 }
 /* End Header */
+/* Start Landing */
+.landing  {
+  background-color: #1f2021;
+  background-image: url(../images/landing.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+.landing .over-lay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 60%);
+}
+.landing .text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  padding: 50px;
+  color: white;
+  background-color: var(--transparent-color);
+  display: flex;
+  justify-content: end;
+}
+.landing .text .content {
+  max-width: 500px;
+}
+.landing .text .content h2 {
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 48px;
+  margin-bottom: 20px;
+}
+.landing .text .content p {
+  font-size: 14px;
+  line-height: 2;
+}
+.landing .change-background {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+.landing .change-background:first-of-type {
+  left: 30px;
+}
+.landing .change-background:last-of-type {
+  right: 30px;
+}
+.landing ul {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: 30px;
+  display: flex;
+}
+.landing ul li {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  margin-right: 10px;
+  border: 1px solid white;
+}
+.landing ul li.active {
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+/* End Landing */
 
