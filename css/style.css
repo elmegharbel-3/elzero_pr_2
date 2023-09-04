@@ -134,6 +134,12 @@ ul,ol {
     .flex-box {
       flex-basis: 100% !important;
     }
+    .our-skills .testimonials .content {
+      flex-direction: column;
+    }
+    .our-skills .testimonials .content img {
+      margin: 0 auto 20px !important;
+    }
 }
 
 /* Small Screens */
@@ -170,10 +176,6 @@ ul,ol {
     column-gap: 40px;
     row-gap: 60px;
   }
-@media (max-width:991px) {
-  .our-skills .container {
-    flex-direction: column;
-  }
 }
 /* Large Screens */
 
@@ -188,7 +190,7 @@ ul,ol {
 
 }
 
-}
+
 
 /* End Media Queries */
 /* Start Header */
@@ -576,6 +578,7 @@ header .container nav .search i {
 .our-skills .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .our-skills .testimonials {
   text-align: center;
