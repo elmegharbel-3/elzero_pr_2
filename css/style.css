@@ -663,3 +663,105 @@ header .container nav .search i {
   top: -16px;
 }
 /* End Skills */
+/* Start Quote */
+.quote {
+  background-image: url(../images/quote.jpg);
+  background-size: cover;
+  padding: var(--section-padding) 0;
+  position: relative;
+}
+.quote::before {
+  content:'';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 75%);
+}
+.quote .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.quote .container q {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: block;
+}
+.quote .container p {
+  text-transform: capitalize;
+}
+/* End Quote */
+/* Start Pricing */
+.pricing {
+  padding: var(--section-padding) 0;
+}
+.pricing .container .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  gap: 30px;
+}
+.pricing .container .content .plan {
+  text-align: center;
+  background-color: #fcfcfc;
+  border-top: 1px solid var(--main-color);
+}
+.pricing .container .content .heading {
+  padding: 40px 20px;
+}
+.pricing .container .content .plan h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.pricing .container .content .plan span {
+  font-weight: bold;
+  font-size: 60px;
+  position: relative;
+}
+.pricing .container .content .plan span::before {
+  content: ' \0024';
+  position: absolute;
+  top: 0;
+  left: -30px;
+  font-size: 25px;
+  font-weight: 300;
+}
+.pricing .container .content .plan span::after {
+  content: '/Mo';
+  font-size: 20px;
+  position: absolute;
+  bottom: 15px;
+  right: -50px;
+}
+.pricing .container .content .plan ul {
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .container .content .plan ul li {
+  text-transform: capitalize;
+  font-size: 16px;
+  padding: 20px 0;
+  position: relative;
+}
+.pricing .container .content .plan ul li:not(li:last-child)::before {
+  content: '';
+  width: 140px;
+  height: 1px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+}
+.pricing .container .content .plan a {
+  text-decoration: none;
+  border: 1px solid var(--main-color);
+  background-color: white;
+  padding: 15px;
+  display: block;
+  width: fit-content;
+  margin: 30px auto ;
+}
+/* End Pricing */
