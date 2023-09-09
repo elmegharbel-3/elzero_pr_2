@@ -140,6 +140,15 @@ ul,ol {
     .our-skills .testimonials .content img {
       margin: 0 auto 20px !important;
     }
+    .contact-us .container .content {
+      flex-direction: column-reverse !important;
+    }
+    .contact-us .container .content .contact-info {
+      text-align: center;
+    }
+    .contact-us .container .content .contact-info p:last-child {
+      margin-bottom: 40px;
+    }
 }
 
 /* Small Screens */
@@ -175,6 +184,14 @@ ul,ol {
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     column-gap: 40px;
     row-gap: 60px;
+  }
+}
+@media (max-width:991px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+  .subscribe .container p {
+    margin: 30px 0 0 !important;
   }
 }
 /* Large Screens */
@@ -759,9 +776,154 @@ header .container nav .search i {
   text-decoration: none;
   border: 1px solid var(--main-color);
   background-color: white;
-  padding: 15px;
+  padding: 20px;
   display: block;
   width: fit-content;
   margin: 30px auto ;
 }
+.pricing .container .contact {
+  text-align: center;
+}
+.pricing .container .contact h3 {
+  font-weight: 300;
+  margin: 50px auto 20px;
+  font-size: 20px;
+}
+.pricing .container .contact a {
+  color: white;
+  background-color: var(--main-color);
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 15px 30px;
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+}
 /* End Pricing */
+/* Start Subscribe */
+.subscribe {
+  background-image: url(../images/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+  padding: var(--section-padding) 0;
+  color: white;
+}
+.subscribe::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 50%);
+}
+.subscribe .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.subscribe .container form {
+  width: 500px;
+  display: flex;
+  position: relative;
+  max-width: 100%;
+}
+.subscribe .container form i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+}
+.subscribe .container form input[type = "email"] {
+  background-color: transparent;
+  padding: 20px 20px 20px 60px;
+  width: calc(100% - 130px);
+  border: 1px solid white;
+  border-right: none;
+  color: #eee;
+  caret-color: var(--main-color);
+}
+.subscribe .container form input[type = "email"]::placeholder {
+  color: white;
+}
+.subscribe .container form input[type = "email"]:focus {
+  outline: none;
+}
+.subscribe .container form input[type = "submit"] {
+  width: 130px;
+  background-color: var(--main-color);
+  text-transform: uppercase;
+  color: white;
+  border: 1px solid white;
+  border-left: none;
+}
+.subscribe .container p {
+  margin-left: 50px;
+  line-height: 2;
+}
+/* End Subscribe */
+/* Start Contact Us */
+.contact-us {
+  padding: var(--section-padding) 0;
+}
+.contact-us .content {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-us .content form {
+  flex-basis: 70%;
+}
+.contact-us .content form .main-input {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+}
+.contact-us .content form .main-input::placeholder {
+  text-transform: capitalize;
+}
+.contact-us .content form input[type="submit"] {
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--main-color);
+  padding: 20px;
+  border: none;
+  margin-left: auto;
+  display: flex;
+}
+.contact-us .content .contact-info {
+  flex-basis: 25%;
+}
+.contact-us .content .contact-info h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.contact-us .content .contact-info p {
+  margin-bottom: 90px;
+  color: #777;
+  line-height: 2;
+}
+.contact-us .content .contact-info p:last-child {
+  margin-bottom: 0;
+}
+/* End Contact Us */
+/* Start footer */
+.footer {
+  background-image: url(../images/subscribe.jpg);
+  padding: var(--section-padding) 0;
+  background-size: cover;
+  position: relative;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+/* End footer */
